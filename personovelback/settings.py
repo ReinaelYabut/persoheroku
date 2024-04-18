@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-2zy!g&nsr&59fq#7b1x5al&i$%js!hp#6m^uukr^-g_l_8_!&h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['.herokuapp.com']
+ALLOWED_HOSTS = [".herokuapp.com"]
 
 CORS_ALLOW_ALL_ORIGINS = True
 
@@ -66,7 +66,7 @@ ROOT_URLCONF = 'personovelback.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-         'DIRS': ['templates'],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -78,7 +78,6 @@ TEMPLATES = [
         },
     },
 ]
-
 WSGI_APPLICATION = 'personovelback.wsgi.application'
 
 # JWT Configuration
@@ -183,11 +182,11 @@ STATICFILES_DIRS = [BASE_DIR / "static_my_project",
                     BASE_DIR / "templates" / "build",
                      ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static_cdn", "static_root")
+STATIC_ROOT = os.path.join(BASE_DIR, "static", "static_root")
 
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, "static_cdn", "media_root")
+MEDIA_ROOT = os.path.join(BASE_DIR, "static", "media_root")
 
 AWS_ACCESS_KEY_ID = 'AKIAZI2LDWF7QUOKYKP6'
 AWS_SECRET_ACCESS_KEY = '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'
